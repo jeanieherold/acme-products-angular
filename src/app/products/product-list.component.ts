@@ -64,4 +64,10 @@ export class ProductListComponent implements OnInit {
     console.log('in oninit');
     this.listFilter = 'cart';
   }
+
+  //method to run once emit is received from child component
+  //when star rating clicked
+  onRatingClicked(message: string): void {
+    this.pageTitle = 'Product List: ' + message;
+  }
 }
