@@ -48,12 +48,14 @@ export class ProductListComponent implements OnInit {
     },
   ];
 
+  //filter products by user filter search value
   performFilter(filterBy: string): IProduct[] {
     filterBy = filterBy.toLocaleLowerCase();
     return this.products.filter((product: IProduct) =>
       product.productName.toLocaleLowerCase().includes(filterBy)
     );
   }
+
   toggleImage(): void {
     this.showImage = !this.showImage;
   }
