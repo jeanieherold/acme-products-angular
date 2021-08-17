@@ -1,0 +1,12 @@
+<div class="container-fluid mt-3">
+  <div class="row">
+    <nav class="navbar navbar-expand navbar-dark bg-dark">
+      <a routerLink="/" class="navbar-brand">{{ pageTitle }}</a>
+      <ul class="nav">
+        <li><a routerLink="/welcome" class="nav-link">Home</a></li>
+        <li><a routerLink="/products" class="nav-link">Product List</a></li>
+      </ul>
+    </nav>
+    <router-outlet></router-outlet>
+  </div>
+</div>

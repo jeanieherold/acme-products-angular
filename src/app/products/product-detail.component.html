@@ -1,0 +1,17 @@
+<div class="card">
+  <div class="card-header">
+    <!-- ? is the safe navigation property that will only 
+      display if defined - use *ngIf to hide or show blocks in most cases -->
+    {{ pageTitle + ": " + product?.productName }}
+  </div>
+  <div class="card-footer">
+    <button
+      class="btn btn-outline-secondary"
+      style="width: 80px"
+      (click)="onBack()"
+    >
+      <span class="fa fa-chevron-left"></span>
+      Back
+    </button>
+  </div>
+</div>
