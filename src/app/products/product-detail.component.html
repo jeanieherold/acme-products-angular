@@ -4,6 +4,43 @@
       display if defined - use *ngIf to hide or show blocks in most cases -->
     {{ pageTitle + ": " + product?.productName }}
   </div>
+  <div class="card-body" *ngIf="product">
+    <div class="row">
+      <div class="col-md-4">
+        <img
+          [src]="product.imageUrl"
+          [title]="product.productName"
+          alt=""
+          [style.width.px]="imageWidth"
+          [style.margin.px]="imageMargin"
+        />
+      </div>
+      <div class="col-md-8">
+        <div class="row">
+          <div class="col-md-4">Name:</div>
+          <div class="col-md-8">{{ product.productName }}</div>
+        </div>
+        <div class="row">
+          <div class="col-md-4">Code:</div>
+          <div class="col-md-8">{{ product.productCode | lowercase }}</div>
+        </div>
+        <div class="row">
+          <div class="col-md-4">Description:</div>
+          <div class="col-md-8">{{ product.description }}</div>
+        </div>
+        <div class="row">
+          <div class="col-md-4">Availability:</div>
+          <div class="col-md-8">{{ product.releaseDate }}</div>
+        </div>
+        <div class="row">
+          <div class="col-md-4">Price:</div>
+          <div class="col-md-8">
+            {{ product.price | currency: "USD":"symbol" }}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
   <div class="card-footer">
     <button
       class="btn btn-outline-secondary"

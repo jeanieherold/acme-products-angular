@@ -1,3 +1,4 @@
-a.navbar-brand:hover {
+a.navbar-brand:hover,
+a.nav-link:hover {
   text-decoration: none;
 }
