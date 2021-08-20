@@ -1,4 +1,4 @@
-import { ConvertToSpacesPipe } from './convert-to-space.pipes';
+import { ConvertToSpacesPipe } from './convert-to-space.pipe';
 import { FormsModule } from '@angular/forms';
 import { StarComponet } from './star.component';
 import { NgModule } from '@angular/core';
